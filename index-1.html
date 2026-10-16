@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Arslan Khan: AI and business innovation</title>
+<meta name="description" content="Arslan Khan is an aspiring entrepreneur from Rawalpindi, Pakistan, exploring AI tools that help small businesses talk to their customers.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230F4C4A'/%3E%3Ctext x='50' y='70' font-size='62' font-family='Arial' font-weight='700' text-anchor='middle' fill='%23F2B134'%3EA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Instrument+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#12262B; --muted:#44595C; --teal:#0F4C4A; --paper:#EEF2F1;
+  --line:#C3D2CF; --gold:#F2B134;
+  --head:"Bricolage Grotesque","Trebuchet MS",system-ui,sans-serif;
+  --body:"Instrument Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:1.0625rem;line-height:1.6}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.wrap{max-width:62rem;margin:0 auto;padding:0 1.25rem}
+
+/* Hero */
+.hero{background:var(--teal);color:var(--paper);padding:4rem 0 4.5rem}
+.hero h1{font-family:var(--head);font-weight:800;font-size:clamp(3.4rem,17vw,8.5rem);line-height:.9;letter-spacing:-.03em;margin:0 0 1.5rem}
+.hero .role{font-family:var(--head);font-weight:600;font-size:clamp(1.25rem,4.5vw,1.9rem);line-height:1.25;max-width:26ch;margin:0 0 .75rem}
+.hero .place{margin:0 0 2rem;color:#BFD6D3}
+.actions{display:flex;flex-wrap:wrap;gap:1rem 1.5rem;align-items:center}
+.btn{display:inline-block;background:var(--gold);color:var(--ink);font-weight:600;text-decoration:none;padding:.85rem 1.4rem;border-radius:.5rem}
+.btn:hover{background:#FFC24F}
+.hero .link{color:var(--paper);text-underline-offset:.25em}
+
+/* Sections */
+section{padding:3.5rem 0;border-bottom:1px solid var(--line)}
+section:last-of-type{border-bottom:0}
+h2{font-family:var(--head);font-weight:800;font-size:clamp(1.7rem,5vw,2.3rem);line-height:1.1;letter-spacing:-.01em;margin:0 0 1.25rem}
+p{margin:0 0 1rem}
+.lead{font-size:1.2rem;max-width:42rem}
+.split{display:grid;gap:1.5rem}
+@media(min-width:48rem){.split{grid-template-columns:14rem 1fr;gap:3rem}.split h2{margin:0}}
+
+/* Interests */
+.interests{list-style:none;margin:0;padding:0;display:grid;gap:1rem;max-width:42rem}
+.interests li{border-left:4px solid var(--gold);padding-left:1rem}
+
+/* Concepts and stage tracks */
+.concept{padding:1.75rem 0;border-top:1px solid var(--line)}
+.concept:first-of-type{border-top:0;padding-top:0}
+.concept h3{font-family:var(--head);font-weight:800;font-size:1.5rem;line-height:1.2;margin:0 0 .5rem}
+.concept p{max-width:40rem}
+.track{list-style:none;margin:1.5rem 0 .5rem;padding:0;display:grid;grid-template-columns:repeat(4,1fr);max-width:34rem}
+.track li{position:relative;text-align:center;font-size:.85rem;color:var(--muted);padding-top:1.75rem}
+.track li::before{content:"";position:absolute;top:.35rem;left:50%;width:1rem;height:1rem;margin-left:-.5rem;border-radius:50%;background:var(--paper);border:2px solid var(--line);z-index:1}
+.track li::after{content:"";position:absolute;top:.85rem;left:-50%;width:100%;height:2px;background:var(--line)}
+.track li:first-child::after{display:none}
+.track li.done::before{background:var(--teal);border-color:var(--teal)}
+.track li.done::after{background:var(--teal)}
+.track li.now{color:var(--ink);font-weight:600}
+.track li.now::before{background:var(--gold);border-color:var(--ink);width:1.3rem;height:1.3rem;margin-left:-.65rem;top:.2rem}
+.note{font-size:.95rem;color:var(--muted)}
+
+/* Skills and facts */
+.cols{list-style:none;margin:0;padding:0;display:grid;gap:.6rem 2rem}
+@media(min-width:40rem){.cols{grid-template-columns:1fr 1fr}}
+.cols li{padding-left:1.1rem;position:relative}
+.cols li::before{content:"";position:absolute;left:0;top:.7em;width:.5rem;height:.5rem;background:var(--teal);border-radius:50%}
+dl{margin:0;display:grid;gap:1rem}
+dt{font-weight:600}
+dd{margin:0;color:var(--muted)}
+
+/* Contact */
+.contact{background:var(--ink);color:var(--paper);border-bottom:0}
+.contact h2{color:var(--paper)}
+.contact a.mail{font-family:var(--head);font-weight:600;font-size:clamp(1.2rem,5.5vw,2rem);word-break:break-all;text-underline-offset:.2em}
+footer{background:var(--ink);color:#9FB5B2;padding:1.5rem 0 2.5rem;font-size:.9rem}
+
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <h1>Arslan<br>Khan</h1>
+    <p class="role">Aspiring entrepreneur exploring AI and business innovation</p>
+    <p class="place">Rawalpindi, Pakistan</p>
+    <div class="actions">
+      <a class="btn" href="mailto:arslanhaakhan.00@gmail.com">Email me</a>
+      <a class="link" href="#concepts">See my business concepts</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section id="about">
+    <div class="wrap split">
+      <h2>About me</h2>
+      <div>
+        <p class="lead">I'm an aspiring entrepreneur from Pakistan with a strong interest in artificial intelligence, business innovation, and technology that solves real problems for small businesses.</p>
+        <p>I want to learn from international communities, grow my leadership and teamwork skills, and work with people from different backgrounds. I like turning ideas into practical solutions and contributing to community and business projects.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="interests">
+    <div class="wrap split">
+      <h2>What I'm interested in</h2>
+      <ul class="interests">
+        <li>AI-powered tools that help small businesses manage customer communication and daily operations.</li>
+        <li>International business, innovation, and technology that more people can use.</li>
+        <li>Working across cultures, building leadership, and solving problems in my community.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="concepts">
+    <div class="wrap split">
+      <h2>Business concepts</h2>
+      <div>
+        <p class="note">Both of these are ideas I'm exploring. Neither is a launched product yet.</p>
+
+        <article class="concept">
+          <h3>AI Business Copilot</h3>
+          <p>An AI assistant for small businesses. It would help them answer customer enquiries and keep their online communication running smoothly.</p>
+          <ol class="track" aria-label="Stage: concept">
+            <li class="now">Concept</li>
+            <li>Research</li>
+            <li>Prototype</li>
+            <li>Launch</li>
+          </ol>
+          <p class="note">Current stage: concept in development.</p>
+        </article>
+
+        <article class="concept">
+          <h3>NOVARA</h3>
+          <p>An international e-commerce brand. So far I've been looking at product research, talking with suppliers, pricing, and what customers in different markets need.</p>
+          <ol class="track" aria-label="Stage: research">
+            <li class="done">Concept</li>
+            <li class="now">Research</li>
+            <li>Prototype</li>
+            <li>Launch</li>
+          </ol>
+          <p class="note">Current stage: early-stage concept.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="wrap split">
+      <h2>Skills and strengths</h2>
+      <ul class="cols">
+        <li>Developing business ideas</li>
+        <li>Independent research and self-directed learning</li>
+        <li>Using AI tools and understanding digital business models</li>
+        <li>Communication and cross-cultural collaboration</li>
+        <li>Adaptability, initiative, and problem-solving</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="background">
+    <div class="wrap split">
+      <h2>Background</h2>
+      <dl>
+        <div><dt>Languages</dt><dd>Urdu, Punjabi, and English</dd></div>
+        <div><dt>Education</dt><dd>Matric-level education, Pakistan</dd></div>
+        <div><dt>Based in</dt><dd>Rawalpindi, Pakistan</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <h2>Get in touch</h2>
+      <p>I'd like to hear from people working on AI, small business, or community projects.</p>
+      <p><a class="mail" href="mailto:arslanhaakhan.00@gmail.com">arslanhaakhan.00@gmail.com</a></p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">&copy; 2026 Arslan Khan</div>
+</footer>
+
+</body>
+</html>
